@@ -14,7 +14,7 @@ public class ConfigUtility {
 	
 	public Properties loadProperties() throws IOException {
 		Properties defaultProps = new Properties();
-		// sets default properties
+	
 		defaultProps.setProperty("mail.smtp.host", "smtp.gmail.com");
 		defaultProps.setProperty("mail.smtp.port", "587");
 		defaultProps.setProperty("mail.user", "prasadsha0301@gmail.com");
@@ -24,7 +24,7 @@ public class ConfigUtility {
 		
 		configProps = new Properties(defaultProps);
 		
-		// loads properties from file
+		
 		if (configFile.exists()) {
 			InputStream inputStream = new FileInputStream(configFile);
 			configProps.load(inputStream);
