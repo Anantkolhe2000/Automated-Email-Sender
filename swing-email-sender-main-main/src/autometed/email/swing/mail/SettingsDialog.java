@@ -15,11 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-/**
- * Displays a setting form that allows configuring SMTP settings. 
- * @author www.codejava.net
- *
- */
 public class SettingsDialog extends JDialog {
 
 	private ConfigUtility configUtil;
