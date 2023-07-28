@@ -26,7 +26,6 @@ public class EmailUtility {
 		final String userName = smtpProperties.getProperty("mail.user");
 		final String password = smtpProperties.getProperty("mail.password");
 		
-		// creates a new session with an authenticator
 		Authenticator auth = new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication(userName, password);
@@ -34,7 +33,6 @@ public class EmailUtility {
 		};
 		Session session = Session.getInstance(smtpProperties, auth);
 
-		// creates a new e-mail message
 		Message msg = new MimeMessage(session);
 
 		msg.setFrom(new InternetAddress(userName));
@@ -43,15 +41,13 @@ public class EmailUtility {
 		msg.setSubject(subject);
 		msg.setSentDate(new Date());
 
-		// creates message part
+		
 		MimeBodyPart messageBodyPart = new MimeBodyPart();
 		messageBodyPart.setContent(message, "text/html");
 
-		// creates multi-part
 		Multipart multipart = new MimeMultipart();
 		multipart.addBodyPart(messageBodyPart);
-
-		// adds attachments
+				
 		if (attachFiles != null && attachFiles.length > 0) {
 			for (File aFile : attachFiles) {
 				MimeBodyPart attachPart = new MimeBodyPart();
@@ -66,10 +62,8 @@ public class EmailUtility {
 			}
 		}
 
-		// sets the multi-part as e-mail's content
 		msg.setContent(multipart);
 
-		// sends the e-mail
 		Transport.send(msg);
 
 	}
