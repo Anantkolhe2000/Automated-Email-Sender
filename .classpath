@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="swing-email-sender-main-main/src"/>
+	<classpathentry kind="lib" path="swing-email-sender-main-main/lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="swing-email-sender-main-main/SwingEmailSender.jar"/>
+	<classpathentry kind="output" path="swing-email-sender-main-main/out/production/swing-email-sender-main"/>
+</classpath>

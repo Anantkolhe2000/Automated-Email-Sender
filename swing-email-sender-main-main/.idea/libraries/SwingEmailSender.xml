@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SwingEmailSender">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SwingEmailSender.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
